@@ -16,5 +16,5 @@ git pull
 
 # Branch
 
-Mostrar brenches no PC
+Mostrar brenches no PC:
 git branch
