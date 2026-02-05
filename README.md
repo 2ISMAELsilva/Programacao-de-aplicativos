@@ -8,8 +8,8 @@
  2- Criar vercionamento (comit):
  git comit -m "comandos basicos de git"
 
-3- Enviar alterações para o github
+3- Enviar alterações para o github:
  git push 
 
-4- Trazendo possiveis alterações para o git
+4- Trazendo possiveis alterações para o git:
 git pull
