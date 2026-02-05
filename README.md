@@ -14,7 +14,7 @@
 4- Trazendo possiveis alterações para o git:
 git pull
 
-#BRANCH
+# Branch
 
 Mostrar brenches no PC
 git branch
