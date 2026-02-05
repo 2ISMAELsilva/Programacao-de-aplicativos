@@ -5,7 +5,7 @@
  1- adicionar arquivo para comit:
  git add . 
 
- 2- Criar vercionamento (comit):
+ 2- Criar vercionamento (commit):
  git comit -m "comandos basicos de git"
 
 3- Enviar alterações para o github
