@@ -6,7 +6,7 @@
  git add . 
 
  2- Criar vercionamento (commit):
- git comit -m "comandos basicos de git"
+ git commit -m "comandos basicos de git"
 
 3- Enviar alterações para o github:
  git push 
