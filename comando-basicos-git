@@ -1,0 +1,25 @@
+### Comandos basicos para inicio
+
+Comando para logar no GitHub
+gh auth login
+
+Comando para clonar um repositorio
+gh repo clone "nome-do-repositorio"
+
+
+### Comandos para salvar codigos
+
+
+Comando para adicionar
+git add . 
+
+Comando para commitar
+git commit -m "Lembrete doque atualizou"
+
+Comando para empurrar para o GitHub
+git push
+
+Comando para atualizar repositório local com as mudanças
+git pull
+
+
