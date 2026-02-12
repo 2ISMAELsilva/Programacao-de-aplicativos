@@ -6,20 +6,117 @@
 
 body {
 
-    background-color: rgb(32, 10, 158);
-    color: rgb(7, 98, 218);
-    background-image: url(assets/fundo.jpg);
+    /* background-color: rgb(57, 22, 255);
+    color: rgb(0, 0, 0); */
+
+    background-image: url(assets/fundo\ 5.png);
 
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+
 }
 
 h1 {
     text-align: center;
     color: rgb(0, 0, 0);
-    font-size: 70px;
-    margin: 15px;
+    font-size: 60px;
+    margin: 20px;
 }
 
+p {
+    text-align: center;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+    color: rgb(228, 228, 228);
+}
+
+
+
+hr {
+
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+
+button {
+    display: block;
+    height: auto;
+    margin: 20px auto;
+    padding: 17px 15px;
+    font-size: 17px;
+    background-color: rgb(228, 228, 228);
+    /* color: rgb(104, 104, 104); */
+    /* border: none; */
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: overline;
+}
+
+a {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px auto;
+    color: rgb(0, 0, 0);
+}
+
+h3 {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    margin: 20px;
+}
+
+
+/* Edição dos nomes da Lista */
+li {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    margin: 3px;
+    padding: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+
+/* Edição da imagem */
+img {
+    display: block; /* deixar no centro da tela*/
+    margin: 60px auto; /* n deixar tão perto da parte de cima do site */
+    width: 160px; /* Editar op tamanho da imagem */
+}
+
+/* Edição do input 1 */
+input {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 15px;
+    font-size: 17px;
+    background-color: rgb(255, 255, 255);
+    /* color: rgb(255, 255, 255); */
+    /* border: none; */
+    border-radius: 100px;
+    text-align: center;
+}
+
+/* Edição do input 2*/
+input-group {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 15px;
+    font-size: 17px;
+    background-color: rgb(255, 255, 255);
+    /* color: rgb(255, 255, 255); */
+    /* border: none; */
+    border-radius: 100px;
+    text-align: center;
+} 
+
+/* Edição do input 3 */
+input[type="text"] {
+    width: 300px;
+}
