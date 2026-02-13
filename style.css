@@ -1,122 +1,100 @@
+/* RESET DE CONFIGURAÇÕES GERAIS PARA OS NAVEGADORES. */
 * {
-    margin: 0;
+    margin: 0;       
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-
-    /* background-color: rgb(57, 22, 255);
-    color: rgb(0, 0, 0); */
-
-    background-image: url(assets/fundo\ 5.png);
-
+    background-color: rgba(177, 170, 185, 0.033);
+    background-image: url("assets/fundo\ 5.png");
+    
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-
 }
 
 h1 {
     text-align: center;
-    color: rgb(0, 0, 0);
-    font-size: 60px;
+    color: rgb(255, 255, 255);
+    font-size: 50px;
     margin: 20px;
 }
 
 p {
-    text-align: center;
-    font-size: 13px;
-    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    font-size: 15px;
+    font-family: 'Arial';
     margin: 20px;
-    color: rgb(228, 228, 228);
+    color: aliceblue;
 }
-
-
 
 hr {
-
     max-width: 50%;
-    margin: 0 auto;
-}
-
-
-button {
-    display: block;
-    height: auto;
     margin: 20px auto;
-    padding: 17px 15px;
-    font-size: 17px;
-    background-color: rgb(228, 228, 228);
-    /* color: rgb(104, 104, 104); */
-    /* border: none; */
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: overline;
 }
 
 a {
-    display: inline-block;
+    display: block;
     text-align: center;
     text-decoration: none;
+    margin: 5px auto;
+    color: rgb(248, 0, 0);
+}
+
+button {
+    display: block;
+    margin: 34px auto;
+    padding: 9px 25px;
+    border-radius: 100px;
+    text-decoration: none;
+}
+
+
+ol {
     margin: 10px auto;
-    color: rgb(0, 0, 0);
+    padding: 30px auto;
+    margin-bottom: 30px;
+    text-align: center;
+    list-style-position: inside;
+}
+
+li {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 540;
 }
 
 h3 {
     text-align: center;
     color: rgb(0, 0, 0);
-    font-size: 30px;
-    margin: 20px;
+    margin: 15px;
 }
 
-
-/* Edição dos nomes da Lista */
-li {
-    font-size: 20px;
-    color: rgb(255, 255, 255);
-    margin: 3px;
-    padding: 6px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-}
-
-
-/* Edição da imagem */
 img {
-    display: block; /* deixar no centro da tela*/
-    margin: 60px auto; /* n deixar tão perto da parte de cima do site */
-    width: 160px; /* Editar op tamanho da imagem */
-}
-
-/* Edição do input 1 */
-input {
     display: block;
-    margin: 20px auto;
-    padding: 12px 15px;
-    font-size: 17px;
-    background-color: rgb(255, 255, 255);
-    /* color: rgb(255, 255, 255); */
-    /* border: none; */
-    border-radius: 100px;
-    text-align: center;
+    max-width: 200px;
+    margin: 15px auto;
 }
 
-/* Edição do input 2*/
 input-group {
-    display: block;
-    margin: 20px auto;
-    padding: 12px 15px;
-    font-size: 17px;
-    background-color: rgb(255, 255, 255);
-    /* color: rgb(255, 255, 255); */
-    /* border: none; */
-    border-radius: 100px;
-    text-align: center;
-} 
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    width: 100%;
+}
 
-/* Edição do input 3 */
 input[type="text"] {
-    width: 300px;
+    text-align: center;
+    display: block;
+    width: 250px;
+    border-radius: 100px;
+    margin: 25px auto;
+    font-weight: 700;
+    padding: 9px;
+    
+    
 }

@@ -1,24 +1,29 @@
-const botaoAdicionar = document.getElementById('botão Adicionar');
-const campoTexto= document.getElementById('campo Texto');
-const lista = document.getElementById('Lista Aprovados');
+// 1. Seleciona os elementos que vamos usar
+const botaoAdicionar = document.getElementById('btnAdicionar');
+const campoTexto = document.getElementById('novoAprovado');
+const lista = document.getElementById('listaAprovados');
 
-botaoAdicionar.addEventListener('click', function()
-{    const nome = campoTexto.value;
+// 2. Cria uma função para adicionar o nome na lista numerada
+botaoAdicionar.addEventListener('click', function() {
+    // Pega o valor digitado no input
+    const nome = campoTexto.value;
 
-    if (nome.trim() !== '') {
+    // Verificamos se o campo não está vazio
+    if (nome.trim() !== "") {
+        // Cria um novo elemento <li> (item de lista)
         const novoItem = document.createElement('li');
-
+        
+        // Colocamos o nome dentro desse novo <li>
         novoItem.textContent = nome;
 
+        // Adicionamos o novo <li> dentro da nossa lista <ol>
         lista.appendChild(novoItem);
 
-        campoTexto.value = '';
+        // Limpamos o campo de texto e voltamos o foco para ele
+        campoTexto.value = "";
         campoTexto.focus();
     } else {
-        alert('Por favor, digite um nome válido.');
+        alert("Por favor, digite um nome!");
     }
-
-})
-
-
+});
 
