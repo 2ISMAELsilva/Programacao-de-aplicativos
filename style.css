@@ -10,6 +10,7 @@ body {
     background-image: url(assts/imagem\ de\ fundo.jpg);
     background-size: cover;
     background-attachment: fixed;
+
 }
 .logo {
     width: 200px;
@@ -30,19 +31,32 @@ p {
     margin-top: 20px;
     font-family: Arial, sans-serif;
 }
-
-a {
+button {
     display: block;
     width: 200px;
     margin: 20px auto;
-    padding: 10px;
-    background-color: #007BFF;
+    padding: 8px;
+    background-color: #28A745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+a {
+    display: block;
+    width: 100px;
+    margin: 5px auto;
+    padding: 8px;
+    background-color: #007bff;
     color: white;
-    text-align: center;
+    /* text-align: center; */
     text-decoration: none;
     border-radius: 5px;
 }
 
+
+/* 
 button {
     display: block;
     width: 200px;
@@ -50,8 +64,20 @@ button {
     padding: 10px;
     background-color: #28A745;
     color: rgb(255, 255, 255);
-    /* text-align: center; */
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}  */
+
+li {
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    font-family: Arial, sans-serif;
+}
+
+ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+    margin-top: 20px;
 }
