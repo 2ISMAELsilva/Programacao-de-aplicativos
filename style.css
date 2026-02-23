@@ -1,102 +1,57 @@
-/* RESET DE CONFIGURAÇÕES GERAIS PARA OS NAVEGADORES. */
+/* RESET DAS CONFIGURAÇÕES DO NAVEGADOR */
 * {
-    margin: 0;       
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* CONFIGURAÇÕES GERAIS */
 body {
-    background-color: rgba(177, 170, 185, 0.033);
-    background-image: url("assets/fundo\ 5.png");
-    
-    background-repeat: no-repeat;
-    background-position: center;
+    background-image: url(assts/imagem\ de\ fundo.jpg);
     background-size: cover;
     background-attachment: fixed;
 }
-
-h1 {
-    text-align: center;
-    color: rgb(255, 255, 255);
-    font-size: 50px;
+.logo {
+    width: 200px;
+    height: auto;
     margin: 20px;
 }
 
-h2{
+h2 {
+    color: white;
     text-align: center;
-    font-size: 37px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    /* margin: 0px; */
-    color: rgb(0, 0, 0);
-
+    margin-top: 50px;
+    font-family: Arial, sans-serif;
 }
-/* 
-hr {
-    max-width: 50%;
-    margin: 20px auto;
-}  */
+
+p {
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+}
 
 a {
     display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
     text-align: center;
     text-decoration: none;
-    margin: 6px;
-    color: rgb(255, 0, 0);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;;
-    font-size: 22px;
+    border-radius: 5px;
 }
 
 button {
     display: block;
-    margin: 50px auto;
-    border-radius: 35px;
-    padding: 20px;
-    font-size: 18px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;;
-}
-
-
-ol {
-    margin: 10px auto;
-    padding: 30px auto;
-    margin-bottom: 30px;
-    text-align: center;
-    list-style-position: inside;
-}
-
-li {
-    font-size: 20px;
-    margin-bottom: 10px;
-    font-weight: 540;
-}
-
-h3 {
-    text-align: center;
-    color: rgb(0, 0, 0);
-    margin: 15px;
-}
-
-img {
-    display: block;
-    max-width: 400px;
-    margin: 9px auto;
-}
-
-input-group {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
-    width: 100%;
-}
-
-input[type="text"] {
-    text-align: center;
-    display: block;
-    width: 250px;
-    border-radius: 100px;
-    margin: 25px auto;
-    font-weight: 700;
-    padding: 9px;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #28A745;
+    color: rgb(255, 255, 255);
+    /* text-align: center; */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
