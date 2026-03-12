@@ -18,7 +18,6 @@ const listaDeUsuarios = [
 // Percorrendo e exibindo os elementos do vetor
 // forEach é uma função com laço de repetição
 console.log("Exibindo todos os usuários do vetor.")
-
 listaDeUsuarios.forEach(usuarios => {
   console.log(`${usuarios.nome} tem ${usuarios.idade} anos`)
 })
@@ -51,3 +50,17 @@ console.log('\nApenas os nomes.')
 listaDeNomes.forEach(nome => {
   console.log(nome)
 })
+
+console.log('\n Na lista de usuarios, Encontre um usuario.')
+const usuarioEncontrado = listaDeUsuarios.find(usuario => usuario.nome === "Mario")
+console.log(`Nome: ${usuarioEncontrado.nome} \nIdade: ${usuarioEncontrado.idade}`)
+
+
+console.log('\nNa lista de usuarios, encontre um usuario com idade 45.')
+const usuarioidade = listaDeUsuarios.find(usuario => usuario.idade === 45)
+console.log(`Nome: ${usuarioidade.nome} \nIdade: ${usuarioidade.idade}`)
+
+
+console.log("\nNa lista de usuarios, some todas as idades.")
+const somaidade = listaDeUsuarios.reduce((total, usuario) => total + usuario.idade, 0)
+console.log(somaidade)
