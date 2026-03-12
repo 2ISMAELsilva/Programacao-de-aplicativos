@@ -1,6 +1,6 @@
 // Novos Recursos
 
-// Vetor de nemreros
+// Vetor de numeros
 const listanumeros = [1,2,3,4,5]
 
 console.log('Exibindo numeros do vetor: ')
