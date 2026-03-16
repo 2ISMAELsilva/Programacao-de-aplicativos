@@ -1,5 +1,11 @@
 /* Importando uma fonte estilo "gamer" */
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Press+Start+2P&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Press+Start+2P&display=swap'); */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     /* Escolha UMA das opções abaixo e apague a outra */
 

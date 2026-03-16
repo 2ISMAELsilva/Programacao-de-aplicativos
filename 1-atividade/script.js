@@ -1,4 +1,6 @@
+
 function gerarTabuada () {
+    
     // Obtendo o número do input no HTML
     const numeroInput = document.getElementById("numeroInput");
     let numero = parseInt(numeroInput.value);
@@ -25,3 +27,13 @@ function gerarTabuada () {
 
 const botaoGerar = document.getElementById("btnGerar");
 botaoGerar.addEventListener("click", gerarTabuada);
+
+const numeroInput = document.getElementById("numeroInput");
+
+numeroInput.addEventListener("keydown", function(event){
+
+    if(event.key === "Enter"){
+        gerarTabuada();
+    }
+
+});
