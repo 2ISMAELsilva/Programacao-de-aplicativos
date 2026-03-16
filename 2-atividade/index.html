@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Pokémon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="pokebola-topo"></div>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg" alt="Pokemon Logo" class="logo">
+    
+    <h2>Calculadora de Status</h2>
+
+    <div class="inputs">
+        <input type="number" id="n1" placeholder="Nível 1">
+        <input type="number" id="n2" placeholder="Nível 2">
+    </div>
+
+    <button onclick="calcular()">Analisar Dados</button>
+
+    <div class="resultado">
+        <p id="soma">Aguardando dados...</p>
+        <p id="media"></p>
+        <p id="produto"></p>
+        <p id="maior"></p>
+        <p id="menor"></p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

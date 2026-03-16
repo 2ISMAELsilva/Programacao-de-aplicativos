@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Craft</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <img src="assets/logo-3.png" class="logo" alt="Minecraft Logo">
+
+    <h2>Bancada de Trabalho</h2>
+
+    <div class="slots">
+        <input type="number" id="n1" placeholder="Qtd. de Blocos">
+        <input type="number" id="n2" placeholder="Qtd. de Itens">
+    </div>
+
+    <button onclick="calcular()">Craftar Resultados</button>
+
+    <div class="resultado">
+        <p id="soma"></p>
+        <p id="media"></p>
+        <p id="produto"></p>
+        <p id="maior"></p>
+        <p id="menor"></p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
