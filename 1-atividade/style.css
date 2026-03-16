@@ -1,0 +1,117 @@
+/* Importando uma fonte estilo "gamer" */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Press+Start+2P&display=swap');
+body {
+    /* Escolha UMA das opções abaixo e apague a outra */
+
+    /* OPÇÃO A: Imagem da Internet (Exemplo: Pista Rainbow Road) */
+    background-image: url('assets/fundo.jpeg'); 
+    
+    /* Configurações para a imagem ocupar a tela toda sem repetir */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    /* Estilos extras para centralizar o conteúdo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Bangers', cursive;
+}
+
+.container {
+    background-color: #f8d000; /* Amarelo das caixas de item */
+    border: 6px solid #000;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 10px 10px 0px #e60012; /* Sombra vermelha sólida */
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Detalhe da bandeira quadriculada no topo */
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 15px;
+    background-image: 
+        linear-gradient(45deg, #000 25%, transparent 25%), 
+        linear-gradient(-45deg, #000 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #000 75%),
+        linear-gradient(-45deg, transparent 75%, #000 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    background-color: #fff;
+}
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.2rem;
+    color: #e60012;
+    text-shadow: 2px 2px #fff;
+    margin-top: 25px;
+    -webkit-text-stroke: 1px black;
+}
+
+label {
+    display: block;
+    margin: 15px 0 5px;
+    color: #000;
+    font-size: 1.2rem;
+}
+
+input[type="number"] {
+    padding: 10px;
+    border: 3px solid #000;
+    border-radius: 10px;
+    font-family: 'Bangers', cursive;
+    font-size: 1.2rem;
+    width: 200px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: #43ad2e; /* Verde Yoshi */
+    color: white;
+    border: 3px solid #000;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-family: 'Bangers', cursive;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: transform 0.1s, background-color 0.2s;
+    display: block;
+    margin: 0 auto 20px;
+    box-shadow: 0 5px 0 #2d7a1e;
+}
+
+button:hover {
+    background-color: #52d038;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: translateY(4px);
+    box-shadow: 0 1px 0 #2d7a1e;
+}
+
+#resultado {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 3px solid #000;
+    border-radius: 10px;
+    padding: 15px;
+    color: #000;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+    line-height: 1.6;
+    min-height: 50px;
+}
