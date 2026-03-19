@@ -1,0 +1,127 @@
+/* 1. Importando uma fonte moderna do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* 2. Reset básico para remover margens padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* 3. Fundo da página animado */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza tudo na tela */
+    justify-content: center;
+    /* Gradiente com 4 cores */
+    background: linear-gradient(-45deg, #1e3c72, #2a5298, #ff416c, #ff4b2b);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite; /* Chama a animação do fundo */
+    color: #ffffff;
+    overflow: hidden;
+}
+
+/* Keyframe para o fundo se mover */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 4. Estilizando o campo de input (Efeito Vidro) */
+input[type="number"] {
+    width: 300px;
+    padding: 15px 25px;
+    font-size: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px); /* O blur cria o efeito de vidro */
+    -webkit-backdrop-filter: blur(10px);
+    outline: none;
+    transition: all 0.4s ease;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Muda a cor do texto de dica (placeholder) */
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Animação quando o usuário clica para digitar */
+input[type="number"]:focus {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+    transform: translateY(-3px) scale(1.02);
+}
+
+/* Esconde as setinhas padrão que aparecem em inputs de número */
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+/* 5. Estilizando o Botão */
+button {
+    padding: 15px 50px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #fff;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    /* Animação de pulso chamativa */
+    animation: pulse 2s infinite; 
+}
+
+/* Efeito ao passar o mouse por cima (Hover) */
+button:hover {
+    background: #fff;
+    color: #ff4b2b; /* A cor do texto muda */
+    transform: translateY(-5px); /* Dá um saltinho pra cima */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    animation: none; /* Pausa o pulso enquanto o mouse está em cima */
+}
+
+/* Efeito ao clicar (Active) */
+button:active {
+    transform: translateY(2px) scale(0.95); /* Dá uma afundadinha */
+}
+
+/* Keyframe para o efeito de pulso no botão */
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5); }
+    70% { box-shadow: 0 0 0 15px rgba(255, 255, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+}
+
+/* 6. Estilizando o Parágrafo de Resultado */
+#Resultado {
+    margin-top: 35px;
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* Essa animação fará o texto surgir suavemente quando o JS adicionar texto nele */
+    animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Animação tipo "Pop" para o texto de resultado */
+@keyframes popIn {
+    0% { opacity: 0; transform: scale(0.5) translateY(20px); }
+    100% { opacity: 1; transform: scale(1) translateY(0); }
+}

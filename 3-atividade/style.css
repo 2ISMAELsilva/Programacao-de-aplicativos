@@ -1,0 +1,91 @@
+/* Importando uma fonte mais moderna do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    /* Um degradê vibrante que dá profundidade ao vidro */
+    background: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* O Container com efeito de Vidro (Glass) */
+.perguntas {
+    background: rgba(255, 255, 255, 0.15); /* Transparência */
+    backdrop-filter: blur(15px); /* O "desfoque" que dá o efeito de vidro */
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Estilização dos Inputs */
+input[type="number"] {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 12px 15px;
+    color: white;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input[type="number"]::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+input[type="number"]:focus {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #fff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Botão Estilo "Glass" */
+button {
+    background: #fff;
+    color: #2575fc;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+button:hover {
+    background: #2575fc;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+/* Área de Resultado */
+.resultado {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#media {
+    color: #fff;
+    font-size: 1.1rem;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 8px;
+}
