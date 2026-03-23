@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Aposentadoria</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="logo">🏢 Sistema RH</div>
+
+    <h2>Verificar Aposentadoria</h2>
+
+    <input type="text" id="codigo" placeholder="Código do empregado"><br>
+    <input type="number" id="anoNascimento" placeholder="Digite sua idade"><br>
+    <input type="number" id="tempoTrabalho" placeholder="Tempo de trabalho (anos)"><br>
+
+    <button onclick="verificar()">Verificar</button>
+
+    <div id="resultado" class="resultado"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

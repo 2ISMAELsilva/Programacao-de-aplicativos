@@ -1,0 +1,111 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fundo futurista */
+body {
+  height: 100vh;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #e2e8f0;
+}
+
+/* Container estilo "painel de IA" */
+.container {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: 15px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+  transition: 0.3s;
+}
+
+/* Efeito hover futurista */
+.container:hover {
+  box-shadow: 0 0 35px rgba(0, 255, 255, 0.5);
+}
+
+/* Logo estilo neon */
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #22d3ee;
+  text-shadow: 0 0 8px #22d3ee;
+}
+
+/* Título */
+h2 {
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+/* Inputs estilo IA */
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid rgba(34, 211, 238, 0.3);
+  background: rgba(2, 6, 23, 0.8);
+  color: #e2e8f0;
+  outline: none;
+  transition: 0.3s;
+}
+
+/* Efeito ao focar */
+input:focus {
+  border-color: #22d3ee;
+  box-shadow: 0 0 10px #22d3ee;
+}
+
+/* Botão estilo tecnologia */
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #06b6d4, #22d3ee);
+  color: #020617;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Hover botão */
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #22d3ee;
+}
+
+/* Resultado */
+.resultado {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  background: rgba(2, 6, 23, 0.6);
+  border: 1px solid rgba(34, 211, 238, 0.2);
+  font-size: 14px;
+}
+
+/* Texto positivo (apto) */
+.resultado.sucesso {
+  color: #4ade80;
+  text-shadow: 0 0 5px #4ade80;
+}
+
+/* Texto negativo */
+.resultado.erro {
+  color: #f87171;
+  text-shadow: 0 0 5px #f87171;
+}

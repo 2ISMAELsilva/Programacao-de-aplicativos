@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Compra de Maçãs</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+  <div class="container">
+    <div class="logo">🍎 Loja de Maçãs</div>
+
+    <p>Digite a quantidade de maçãs:</p>
+    <input type="number" id="quantidade" min="1">
+
+    <br>
+    <button onclick="calcular()">Calcular</button>
+
+    <div class="resultado" id="resultado"></div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

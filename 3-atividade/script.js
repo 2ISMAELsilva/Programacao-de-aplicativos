@@ -7,6 +7,7 @@ function calcular() {
     // 2. Referência do HTML
     const elementoResultado = document.getElementById("media");
     
+    
     // 3. Validação (Sua lógica está perfeita aqui!)
     if (isNaN(n1) || isNaN(n2) || isNaN(n3)) {
         alert("Ei! Digite os números para continuar!");
