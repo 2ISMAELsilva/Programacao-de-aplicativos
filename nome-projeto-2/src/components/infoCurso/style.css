@@ -1,0 +1,63 @@
+/* Estilo do container - O Livro de Aventuras */
+.info-curso {
+    background-color: #FDF4E3; /* Fundo cor de página de diário/papel envelhecido */
+    border: 2px solid #8B4513; /* Borda externa em marrom simulando couro */
+    border-radius: 4px 15px 15px 4px; /* Arredondado apenas na direita, como um livro fechado */
+    border-left: 18px solid #5D4037; /* Lombada grossa do livro */
+    padding: 30px;
+    max-width: 350px;
+    margin: 20px auto;
+    font-family: 'Fredoka', sans-serif; /* Mantendo a mesma fonte para o projeto ficar harmonioso */
+    color: #3E2723;
+    position: relative;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Sombra pesada de objeto físico */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Um charme extra: um "pedaço de fita crepe" colando o livro/página */
+.info-curso::before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-3deg);
+    width: 100px;
+    height: 25px;
+    background-color: rgba(245, 245, 220, 0.8); /* Cor de fita adesiva antiga */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    border-radius: 2px;
+}
+
+/* Título do cartão (O Título da Aventura) */
+.info-curso h2 {
+    text-align: center;
+    color: #8B4513; /* Marrom escuro vintage */
+    font-size: 1.8rem;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px dashed #BCAAA4; /* Linha tracejada de caderno */
+    padding-bottom: 10px;
+}
+
+/* Estilo das informações (Nome, Carga, Local) */
+.info-curso p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 15px 0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #D7CCC8; /* Linhas finas, como se fosse um caderno pautado */
+}
+
+/* Alfinetes de mapa antes de cada linha de texto */
+.info-curso p::before {
+    content: '📌 '; /* Trazendo a ideia de planejar uma rota no mapa */
+    margin-right: 8px;
+}
+
+/* Interação: Ao passar o mouse, o "livro" se inclina levemente, como se fosse ser aberto */
+.info-curso:hover {
+    transform: rotate(2deg) scale(1.02);
+    box-shadow: 8px 8px 25px rgba(0, 0, 0, 0.3);
+}

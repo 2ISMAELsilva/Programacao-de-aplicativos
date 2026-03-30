@@ -1,0 +1,14 @@
+.mensagem h2{
+    color: burlywood;
+    margin: 10px 0;
+}
+
+.mensagem p{
+    color: black;
+    margin: 10px 0;
+}
+.mensagem hr{
+    max-width: 70%;
+    
+
+}

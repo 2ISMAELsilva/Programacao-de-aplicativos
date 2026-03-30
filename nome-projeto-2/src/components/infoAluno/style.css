@@ -1,0 +1,120 @@
+/* Importando as fontes utilizadas nos dois cartões */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:wght@400;700&family=Fredoka:wght@400;600&display=swap');
+
+
+.infor-aluno {
+    /* Cores de camuflagem/uniforme: Bege areia e bordas verde musgo */
+    background-color: #E2D1B3; 
+    border: 5px solid #4B5320; /* Verde Exército/Oliva */
+    border-radius: 8px; /* Cantos menos arredondados para um visual mais rígido */
+    padding: 25px;
+    max-width: 350px;
+    margin: 20px auto;
+    font-family: 'Roboto', sans-serif;
+    color: #2B2B2B;
+    box-shadow: 8px 8px 0px #353a16; /* Sombra sólida, estilo retrô/militar */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Título com estilo de carimbo ou placa de metal */
+.infor-aluno h2 {
+    font-family: 'Archivo Black', sans-serif;
+    text-align: center;
+    background-color: #4B5320;
+    color: #E2D1B3;
+    margin: -25px -25px 20px -25px; /* Alinha o título no topo do card */
+    padding: 15px;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+/* Estilo das linhas de informação */
+.infor-aluno p {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 10px 0;
+    padding: 8px;
+    border-bottom: 2px solid rgba(75, 83, 32, 0.2); /* Linha divisória sutil */
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Detalhe de ID de Patrulha no canto inferior */
+.infor-aluno::after {
+    content: "PATROL UNIT 01";
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: rgba(75, 83, 32, 0.5);
+}
+
+.infor-aluno:hover {
+    filter: brightness(1.05);
+}
+
+
+.info-curso {
+    background-color: #FDF4E3; /* Fundo cor de página de diário/papel envelhecido */
+    border: 2px solid #8B4513; /* Borda externa em marrom simulando couro */
+    border-radius: 4px 15px 15px 4px; /* Arredondado apenas na direita, como um livro fechado */
+    border-left: 18px solid #5D4037; /* Lombada grossa do livro */
+    padding: 30px;
+    max-width: 350px;
+    margin: 20px auto;
+    font-family: 'Fredoka', sans-serif; 
+    color: #3E2723;
+    position: relative;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Sombra de objeto físico */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* "Pedaço de fita crepe" colando a página */
+.info-curso::before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-3deg);
+    width: 100px;
+    height: 25px;
+    background-color: rgba(245, 245, 220, 0.8); /* Cor de fita adesiva antiga */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    border-radius: 2px;
+}
+
+/* Título da Aventura */
+.info-curso h2 {
+    text-align: center;
+    color: #8B4513; /* Marrom escuro vintage */
+    font-size: 1.8rem;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px dashed #BCAAA4; /* Linha tracejada de caderno */
+    padding-bottom: 10px;
+}
+
+/* Linhas do diário */
+.info-curso p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 15px 0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #D7CCC8; /* Caderno pautado */
+}
+
+/* Alfinetes de mapa */
+.info-curso p::before {
+    content: '📌 ';
+    margin-right: 8px;
+}
+
+/* Animação ao passar o mouse */
+.info-curso:hover {
+    transform: rotate(2deg) scale(1.02);
+    box-shadow: 8px 8px 25px rgba(0, 0, 0, 0.3);
+}
