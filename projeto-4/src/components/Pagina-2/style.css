@@ -1,0 +1,100 @@
+/* Importando uma fonte que lembra o estilo divertido de desenhos */
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@400;700&display=swap');
+
+:root {
+  --toy-blue: #00AEEF;
+  --toy-yellow: #FFD200;
+  --toy-red: #ED1C24;
+  --toy-wood: #8B4513;
+  --toy-cloud: #FFFFFF;
+}
+
+body {
+  background-color: var(--toy-blue);
+  /* Simulando o papel de parede de nuvens do Andy */
+  background-image: radial-gradient(var(--toy-cloud) 20%, transparent 20%),
+                    radial-gradient(var(--toy-cloud) 20%, transparent 20%);
+  background-position: 0 0, 50px 50px;
+  background-size: 100px 100px;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.formulario {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.1);
+  border: 5px solid var(--toy-yellow);
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+}
+
+/* Títulos com a fonte "Luckiest Guy" para o clima de brinquedo */
+h2 {
+  font-family: 'Luckiest Guy', cursive;
+  color: var(--toy-red);
+  letter-spacing: 2px;
+  -webkit-text-stroke: 1px var(--toy-yellow);
+  margin-bottom: 20px;
+}
+
+input {
+  width: 90%;
+  padding: 12px;
+  border: 3px solid var(--toy-blue);
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+  transition: transform 0.2s;
+}
+
+input:focus {
+  transform: scale(1.05);
+  border-color: var(--toy-red);
+}
+
+hr {
+  border: 0;
+  height: 3px;
+  background: var(--toy-yellow);
+  margin: 25px 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: var(--toy-yellow);
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 12px;
+  color: #333;
+  font-weight: bold;
+  box-shadow: 4px 4px 0px var(--toy-wood);
+  transition: all 0.3s ease;
+}
+
+li:hover {
+  transform: translateY(-5px) rotate(-2deg);
+  background: var(--toy-red);
+  color: white;
+}
+
+strong {
+  text-transform: uppercase;
+  display: block;
+  font-size: 1.1em;
+}
+
+p {
+  color: var(--toy-wood);
+  font-weight: bold;
+}
