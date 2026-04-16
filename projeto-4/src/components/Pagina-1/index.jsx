@@ -1,51 +1,46 @@
 import { useState } from 'react'
 import './style.css'
 
-export default function AdicionarUsuario() {
+export default function AdicionarBrinquedo() {
     const [nome, setNome] = useState('')
-    const [email, setEmail] = useState('')
-    const [listaDeUsuarios, setListaDeUsuarios] = useState([])
+    const [personagem, setPersonagem] = useState('')
+    const [caixaDeBrinquedos, setCaixaDeBrinquedos] = useState([])
 
-    // Função para adicionar usuário em uma lista.
-    const handlerAdicionarUsuario = (event) => {
-        // Evitando que a página recarregue ao mudar algum elemento na página.
+    const handlerAdicionarBrinquedo = (event) => {
         event.preventDefault()
-        if (nome && email) {
-            // Adicionando novo usuário
-            setListaDeUsuarios([...listaDeUsuarios, { nome, email }])
-            // Definindo os campos como vazio.
+        if (nome && personagem) {
+            setCaixaDeBrinquedos([...caixaDeBrinquedos, { nome, personagem }])
             setNome('')
-            setEmail('')
+            setPersonagem('')
         }
     }
     
     return (
-        // Criando HTML da página.
         <div className='formulario'>
-            <h2>Adicionar Usuário</h2>
-            <form onSubmit={handlerAdicionarUsuario}>
-                <input type="text"
-                value={nome}
-                onChange={(e) => setNome(e.target.value)}
+            <h2>🚀 Adicionar à Caixa de Brinquedos</h2>
+            <form onSubmit={handlerAdicionarBrinquedo}>
+                <input 
+                    type="text"
+                    placeholder="Nome do Brinquedo (ex: Woody)"
+                    value={nome}
+                    onChange={(e) => setNome(e.target.value)}
                 />
                 <input 
-                    type="email"
-                    placeholder='E-mail'
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    type="text" 
+                    placeholder='Tipo/Personagem (ex: Cowboy)'
+                    value={personagem}
+                    onChange={(e) => setPersonagem(e.target.value)}
                 />
-                <button type='submit'>Adicionar</button>
+                <button type='submit'>Recrutar Brinquedo</button>
             </form>
 
             <hr />
 
-            <h2>usuários adicionados</h2>
+            <h2>🤠 Brinquedos do Andy</h2>
             <ul>
-                {/* usando o map para mostrar cada usuário na lista
-                com base no índice. */}
-                {listaDeUsuarios.map((usuario, index) => (
+                {caixaDeBrinquedos.map((item, index) => (
                     <li key={index}>
-                        {usuario.nome} - {usuario.email}
+                        <strong>{item.nome}</strong> - {item.personagem} 
                     </li>
                 ))}
             </ul>

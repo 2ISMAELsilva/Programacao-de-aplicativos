@@ -1,57 +1,57 @@
 import { useState } from 'react'
 import './style.css'
 
-export default function ConfiguracoesPerfil() {
-    const [nomeSistema, setNomeSistema] = useState('Meu App React')
-    const [tema, setTema] = useState('Claro')
-    const [notificacoes, setNotificacoes] = useState(true)
+export default function ConfiguracoesQuarto() {
+    const [nomeDono, setNomeDono] = useState('Andy')
+    const [ambiente, setAmbiente] = useState('Quarto do Andy')
+    const [estaVindo, setEstaVindo] = useState(false)
 
     const salvarConfiguracoes = (event) => {
         event.preventDefault()
-        alert('Configurações salvas com sucesso!')
-        console.log({ nomeSistema, tema, notificacoes })
+        alert('O brinquedo salvou as configurações antes do humano chegar!')
     }
 
     return (
         <div className='formulario'>
-            <h2>Configurações do Sistema</h2>
+            <h2>⚙️ Configurações do Quarto</h2>
             <form onSubmit={salvarConfiguracoes}>
-                <label>Nome do Sistema:</label>
+                <label>Nome na sola da bota:</label>
                 <input 
                     type="text" 
-                    value={nomeSistema}
-                    onChange={(e) => setNomeSistema(e.target.value)}
+                    value={nomeDono}
+                    onChange={(e) => setNomeDono(e.target.value)}
                 />
 
-                <label>Tema do App:</label>
-                <select value={tema} onChange={(e) => setTema(e.target.value)}>
-                    <option value="Claro">Claro</option>
-                    <option value="Escuro">Escuro</option>
-                    <option value="Sistema">Padrão do Sistema</option>
+                <label>Localização:</label>
+                <select value={ambiente} onChange={(e) => setAmbiente(e.target.value)}>
+                    <option value="Quarto do Andy">Quarto do Andy</option>
+                    <option value="Creche Sunnyside">Creche Sunnyside</option>
+                    <option value="Quarto da Bonnie">Quarto da Bonnie</option>
                 </select>
 
                 <div style={{ marginTop: '15px' }}>
                     <label>
                         <input 
                             type="checkbox" 
-                            checked={notificacoes}
-                            onChange={(e) => setNotificacoes(e.target.checked)}
+                            checked={estaVindo}
+                            onChange={(e) => setEstaVindo(e.target.checked)}
                         />
-                        Ativar notificações por e-mail
+                        <strong> O HUMANO ESTÁ VINDO!</strong> (Modo Estátua)
                     </label>
                 </div>
 
                 <button type='submit' style={{ marginTop: '20px' }}>
-                    Salvar Alterações
+                    Confirmar Missão
                 </button>
             </form>
 
             <hr />
 
             <div className='resumo'>
-                <h3>Resumo Atual:</h3>
-                <p><strong>Status:</strong> {notificacoes ? 'Recebendo Alertas' : 'Silenciado'}</p>
-                <p><strong>Interface:</strong> {tema}</p>
+                <h3>Status da Missão:</h3>
+                <p><strong>Dono:</strong> {nomeDono}</p>
+                <p><strong>Cenário:</strong> {ambiente}</p>
+                <p><strong>Alerta:</strong> {estaVindo ? '🤫 Fingindo de morto!' : '🤠 Brincando livremente'}</p>
             </div>
         </div>
     )

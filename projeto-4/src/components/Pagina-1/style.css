@@ -1,163 +1,121 @@
-/* Importando uma fonte divertida, mas legível */
-@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Nunito:wght@400;700&display=swap');
+/* Importando uma fonte divertida para os títulos */
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Open+Sans:wght@400;700&display=swap');
 
 :root {
-    /* Paleta Toy Story */
-    --andy-sky: #87CEEB; /* Azul Céu do Quarto do Andy */
-    --woody-yellow: #FDD835; /* Amarelo da Camisa do Woody */
-    --woody-red: #D32F2F; /* Vermelho do Lenço do Woody */
-    --woody-brown: #795548; /* Marrom dos detalhes */
-    --buzz-green: #76FF03; /* Verde do Buzz */
-    --buzz-purple: #9C27B0; /* Roxo do Buzz */
-    --text-color: #37474F;
+  --andy-blue: #35a1eb;
+  --woody-yellow: #f9d71c;
+  --woody-red: #d32f2f;
+  --buzz-green: #76ff03;
+  --buzz-purple: #9c27b0;
+  --toy-white: #fefefe;
+  --shadow-brown: #5d4037;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    /* Padrão de nuvens do Andy */
-    background-color: var(--andy-sky);
-    background-image: 
-        radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 10px),
-        radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 10px),
-        radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 20px);
-    background-size: 550px 550px, 350px 350px, 250px 250px;
-    background-position: 0 0, 40px 60px, 130px 270px;
-    font-family: 'Nunito', sans-serif; /* Fonte legível para o corpo */
+  background-color: var(--andy-blue);
+  /* Efeito de nuvens do quarto do Andy */
+  background-image: 
+    radial-gradient(circle at 20% 30%, white 4%, transparent 8%),
+    radial-gradient(circle at 70% 60%, white 6%, transparent 12%),
+    radial-gradient(circle at 40% 80%, white 5%, transparent 10%);
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  padding-top: 40px;
 }
 
 .formulario {
-    background-color: white;
-    padding: 3rem 2.5rem;
-    border-radius: 30px;
-    /* Borda marrom como se fosse um brinquedo de madeira */
-    border: 8px solid var(--woody-brown);
-    box-shadow: 0 10px 0px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 420px;
+  background: var(--toy-white);
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  border-radius: 25px;
+  border: 6px solid var(--woody-yellow);
+  box-shadow: 12px 12px 0px var(--shadow-brown);
+  text-align: center;
 }
 
 h2 {
-    /* Fonte estilo logo do Toy Story */
-    font-family: 'Luckiest Guy', cursive;
-    color: var(--woody-red);
-    font-size: 2.2rem;
-    font-weight: normal;
-    text-align: center;
-    margin-top: 0;
-    margin-bottom: 1rem;
-    text-shadow: 3px 3px 0px #FDD835, 3px 3px 0px #37474F;
-    letter-spacing: 1.5px;
+  font-family: 'Bungee', cursive;
+  color: var(--woody-red);
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+/* Estilização dos campos de texto */
+input[type="text"] {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 3px solid #ddd;
+  border-radius: 12px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  transition: all 0.3s ease;
 }
 
-input {
-    padding: 15px 20px;
-    border: 3px solid #CFD8DC;
-    border-radius: 50px; /* Extremamente arredondado */
-    font-size: 1rem;
-    font-weight: bold;
-    color: var(--text-color);
-    outline: none;
-    transition: all 0.2s ease;
+input[type="text"]:focus {
+  border-color: var(--andy-blue);
+  outline: none;
+  box-shadow: 0 0 8px rgba(53, 161, 235, 0.4);
 }
 
-input:focus {
-    border-color: var(--buzz-green);
-    box-shadow: 0 0 0 5px rgba(118, 255, 3, 0.2);
-}
-
+/* Botão estilo "Action Figure" do Buzz */
 button {
-    background-color: var(--woody-yellow);
-    color: var(--woody-red);
-    padding: 15px;
-    border: 3px solid var(--woody-red);
-    border-radius: 50px;
-    font-family: 'Luckiest Guy', cursive;
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    margin-top: 10px;
-    text-shadow: 1px 1px 0px #FFF;
-    text-transform: uppercase;
+  width: 100%;
+  padding: 15px;
+  background-color: var(--buzz-green);
+  color: var(--shadow-brown);
+  font-family: 'Bungee', cursive;
+  font-size: 1.1rem;
+  border: none;
+  border-bottom: 6px solid #558b2f;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
 }
 
 button:hover {
-    background-color: var(--woody-red);
-    color: white;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 0px var(--woody-brown);
+  background-color: #a2ff5e;
+  transform: translateY(-2px);
+  border-bottom-width: 8px;
 }
 
 button:active {
-    transform: translateY(2px);
-    box-shadow: none;
+  transform: translateY(3px);
+  border-bottom-width: 2px;
 }
 
 hr {
-    border: 0;
-    height: 3px;
-    background-color: var(--woody-brown);
-    margin: 2.5rem 0;
-    border-radius: 5px;
+  border: 0;
+  border-top: 4px dashed var(--woody-yellow);
+  margin: 25px 0;
 }
 
+/* Lista de brinquedos */
 ul {
-    list-style: none;
-    padding: 0;
-    max-height: 250px;
-    overflow-y: auto;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 li {
-    background-color: #FFF9C4; /* Amarelo clarinho */
-    padding: 12px 20px;
-    border-radius: 15px;
-    margin-bottom: 10px;
-    font-weight: bold;
-    color: var(--text-color);
-    border: 2px solid #FBC02D;
-    animation: bounceIn 0.5s ease;
-    display: flex;
-    align-items: center;
+  background: #f0f0f0;
+  margin-bottom: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  border-left: 8px solid var(--buzz-purple);
+  text-align: left;
+  color: var(--shadow-brown);
+  font-weight: bold;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
 }
 
-/* Detalhe da assinatura na sola */
-li::after {
-    content: "ANDY";
-    font-family: 'Luckiest Guy', cursive;
-    color: rgba(55, 71, 79, 0.2); /* Sutil */
-    font-size: 1.1rem;
-    margin-left: auto;
-    letter-spacing: -1px;
-    margin-right: -10px;
-}
-
-@keyframes bounceIn {
-    0% { opacity: 0; transform: scale(0.3); }
-    50% { opacity: 1; transform: scale(1.05); }
-    70% { transform: scale(0.9); }
-    100% { transform: scale(1); }
-}
-
-/* Scrollbar personalizada Buzz Lightyear */
-ul::-webkit-scrollbar {
-    width: 10px;
-}
-ul::-webkit-scrollbar-thumb {
-    background: var(--buzz-purple);
-    border-radius: 10px;
-    border: 2px solid white;
-}
-ul::-webkit-scrollbar-track {
-    background: white;
+li strong {
+  color: var(--woody-red);
 }

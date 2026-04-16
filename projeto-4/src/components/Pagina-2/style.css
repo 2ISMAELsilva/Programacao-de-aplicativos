@@ -1,100 +1,114 @@
-/* Importando uma fonte que lembra o estilo divertido de desenhos */
-@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@400;700&display=swap');
+/* Importando fontes temáticas */
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Special+Elite&display=swap');
 
 :root {
-  --toy-blue: #00AEEF;
-  --toy-yellow: #FFD200;
-  --toy-red: #ED1C24;
-  --toy-wood: #8B4513;
-  --toy-cloud: #FFFFFF;
+  --andy-blue: #35a1eb;
+  --woody-red: #d32f2f;
+  --buzz-green: #76ff03;
+  --army-green: #4b5320; /* Cor dos soldadinhos */
+  --toy-white: #fefefe;
+  --sky-white: rgba(255, 255, 255, 0.8);
 }
 
 body {
-  background-color: var(--toy-blue);
-  /* Simulando o papel de parede de nuvens do Andy */
-  background-image: radial-gradient(var(--toy-cloud) 20%, transparent 20%),
-                    radial-gradient(var(--toy-cloud) 20%, transparent 20%);
-  background-position: 0 0, 50px 50px;
-  background-size: 100px 100px;
-  font-family: 'Poppins', sans-serif;
+  background-color: var(--andy-blue);
+  background-image: 
+    radial-gradient(circle at 20% 30%, white 4%, transparent 8%),
+    radial-gradient(circle at 75% 20%, white 5%, transparent 10%),
+    radial-gradient(circle at 40% 80%, white 6%, transparent 12%);
+  font-family: 'Open Sans', sans-serif;
   display: flex;
   justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  padding: 40px 20px;
   margin: 0;
 }
 
 .formulario {
-  background-color: rgba(255, 255, 255, 0.95);
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.1);
-  border: 5px solid var(--toy-yellow);
+  background: var(--toy-white);
   width: 100%;
   max-width: 450px;
-  text-align: center;
+  padding: 30px;
+  border-radius: 30px;
+  border: 8px solid #f9d71c; /* Amarelo Woody */
+  box-shadow: 15px 15px 0px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
 }
 
-/* Títulos com a fonte "Luckiest Guy" para o clima de brinquedo */
+/* Título com estilo de logo/missão */
 h2 {
-  font-family: 'Luckiest Guy', cursive;
-  color: var(--toy-red);
-  letter-spacing: 2px;
-  -webkit-text-stroke: 1px var(--toy-yellow);
-  margin-bottom: 20px;
+  font-family: 'Bungee', cursive;
+  color: var(--woody-red);
+  text-align: center;
+  margin-top: 0;
+  line-height: 1.2;
 }
 
-input {
-  width: 90%;
-  padding: 12px;
-  border: 3px solid var(--toy-blue);
-  border-radius: 10px;
-  font-size: 16px;
+/* Campo de busca estilo Radar */
+input[type="text"] {
+  width: 100%;
+  padding: 15px 20px;
+  border: 4px solid var(--army-green);
+  border-radius: 50px;
+  font-family: 'Special Elite', cursive; /* Fonte estilo máquina de escrever/militar */
+  font-size: 1.1rem;
+  background-color: #e8f5e9;
+  box-sizing: border-box;
   outline: none;
-  transition: transform 0.2s;
+  transition: all 0.3s ease;
 }
 
-input:focus {
-  transform: scale(1.05);
-  border-color: var(--toy-red);
+input[type="text"]:focus {
+  background-color: #fff;
+  border-color: var(--buzz-green);
+  box-shadow: 0 0 15px rgba(118, 255, 3, 0.4);
 }
 
 hr {
   border: 0;
-  height: 3px;
-  background: var(--toy-yellow);
+  border-top: 5px dotted #ccc;
   margin: 25px 0;
 }
 
+/* Lista de resultados do "Radar" */
 ul {
   list-style: none;
   padding: 0;
 }
 
 li {
-  background: var(--toy-yellow);
-  margin-bottom: 10px;
+  background: var(--army-green);
+  color: white;
+  margin-bottom: 12px;
   padding: 15px;
   border-radius: 12px;
-  color: #333;
-  font-weight: bold;
-  box-shadow: 4px 4px 0px var(--toy-wood);
-  transition: all 0.3s ease;
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 4px solid #2e3314;
+  transition: transform 0.2s;
 }
 
 li:hover {
-  transform: translateY(-5px) rotate(-2deg);
-  background: var(--toy-red);
-  color: white;
+  transform: scale(1.02);
+  background: #5a632d;
 }
 
-strong {
-  text-transform: uppercase;
-  display: block;
-  font-size: 1.1em;
+li strong {
+  color: var(--buzz-green);
+  font-family: 'Bungee', cursive;
+  font-weight: normal;
+  font-size: 1rem;
 }
 
+/* Mensagem de erro (brinquedo não encontrado) */
 p {
-  color: var(--toy-wood);
+  font-family: 'Special Elite', cursive;
+  color: var(--woody-red);
+  text-align: center;
   font-weight: bold;
+  background: #ffebee;
+  padding: 10px;
+  border-radius: 10px;
 }
